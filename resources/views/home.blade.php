@@ -8,7 +8,12 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                分類
+				<select name="sel_cate1">
+				@foreach ($data as $id => $row)
+				<option value='test'>{{$row->cate1_nm}}</option>
+				@endforeach
+				</select>
                 </div>
             </div>
         </div>

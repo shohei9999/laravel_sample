@@ -23,6 +23,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+		$data = $this->find();
+		return view('home', compact('data'));
+        //return view('home');
     }
+
+	public function find()
+	{
+		$sql = "SELECT * FROM gamou.MASCATE1";
+		return \DB::connection()->select($sql);
+	}
 }
