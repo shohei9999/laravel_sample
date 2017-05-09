@@ -27,5 +27,18 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->environment('local', 'testing')) {
             $this->app->register(DuskServiceProvider::class);
         }
+        $this->app->bind(
+            \App\Repositories\EntryRepositoryInterface::class,
+            \App\Repositories\EntryRepository::class
+        );
+        $this->app->bind(
+            \App\Repositories\Criteria\Entryable::class,
+            \App\Repositories\Criteria\EntryDataAccessObject::class
+        );
+
+        $this->app->bind(
+            \App\Repositories\ReserveRepositoryInterface::class,
+            \App\Repositories\ReserveRepository::class
+        );
     }
 }
