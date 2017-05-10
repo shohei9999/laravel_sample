@@ -12,7 +12,7 @@ class EntryDataAccessObject extends FluentObject implements Entryable
     /** @var DatabaseManager */
     protected $db;
     /** @var string */
-    protected $table = 'entries';
+    protected $table = 'gamou';
     /** @var string  */
     protected $identity = 'id';
     /**
@@ -34,7 +34,7 @@ class EntryDataAccessObject extends FluentObject implements Entryable
         }
         return $this->db->connection()
             ->table($this->table)
-            ->where('entry_id', $item->getId())->update($this->data($item));
+            ->where('id', $item->getId())->update($this->data($item));
     }
     /**
      * @param $id
@@ -43,7 +43,7 @@ class EntryDataAccessObject extends FluentObject implements Entryable
     public function find($id)
     {
         $data = $this->db->connection()
-            ->table($this->table)->where('entry_id', $id)->first();
+            ->table($this->table)->where('id', $id)->first();
         if(is_null($data)) {
             return null;
         }
