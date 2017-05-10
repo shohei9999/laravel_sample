@@ -38,6 +38,6 @@ class AppServiceProvider extends ServiceProvider
 //        $this->app->bind(
 //            \App\Repositories\ReserveRepositoryInterface::class,
 //            \App\Repositories\ReserveRepository::class
-        );
+//        );
     }
 }
