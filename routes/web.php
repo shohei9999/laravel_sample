@@ -19,4 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/entry', 'EntryController@show')->name('entry');
+Route::get('/entry', 'EntryController@store')->name('entry');
