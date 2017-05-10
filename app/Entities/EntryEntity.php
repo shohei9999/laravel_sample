@@ -8,20 +8,20 @@ namespace App\Entities;
 class EntryEntity implements Entityable
 {
     /** @var int */
-    private $entry_id;
+    private $id;
     /** @var string  */
-    public $title;
+    public $name;
+    /** @var int */
+    public $cust_id;
     /** @var string */
-    public $content;
+    public $email;
     /** @var string */
-    public $created_at;
-    /** @var string */
-    public $updated_at;
+    public $password;
     /**
      * @return int
      */
     public function getId()
     {
-        return $this->entry_id;
+        return $this->id;
     }
 }

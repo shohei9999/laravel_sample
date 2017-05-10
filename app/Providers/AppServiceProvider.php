@@ -35,10 +35,9 @@ class AppServiceProvider extends ServiceProvider
             \App\Repositories\Criteria\Entryable::class,
             \App\Repositories\Criteria\EntryDataAccessObject::class
         );
-
-        $this->app->bind(
-            \App\Repositories\ReserveRepositoryInterface::class,
-            \App\Repositories\ReserveRepository::class
+//        $this->app->bind(
+//            \App\Repositories\ReserveRepositoryInterface::class,
+//            \App\Repositories\ReserveRepository::class
         );
     }
 }

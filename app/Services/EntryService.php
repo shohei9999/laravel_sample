@@ -34,8 +34,8 @@ class EntryService
     public function setEntry(array $params)
     {
         $entry = new EntryEntity;
-        $entry->content = $params['content'];
-        $entry->title = $params['title'];
+        $entry->name = $params['name'];
+        $entry->cust_cd = $params['cust_cd'];
         $datetime = Carbon::now()->toDateTimeString();
         $entry->created_at = $datetime;
         $entry->updated_at = $datetime;
