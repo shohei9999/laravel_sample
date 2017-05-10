@@ -12,7 +12,7 @@ class EntryDataAccessObject extends FluentObject implements Entryable
     /** @var DatabaseManager */
     protected $db;
     /** @var string */
-    protected $table = 'gamou';
+    protected $table = 'users';
     /** @var string  */
     protected $identity = 'id';
     /**
