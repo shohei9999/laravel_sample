@@ -40,8 +40,8 @@ class EntryController extends AbstractController
     public function store()
     {
         $this->entry->setEntry([
-            'title' => 'hello Laravel5.1',
-            'content' => 'Laravel makes connecting with databases and running queries extremely simple.',
+            'name' => 'tarou',
+            'cust_cd' => '22',
         ]);
     }
 }

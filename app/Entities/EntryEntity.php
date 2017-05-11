@@ -12,7 +12,7 @@ class EntryEntity implements Entityable
     /** @var string  */
     public $name;
     /** @var int */
-    public $cust_id;
+    public $cust_cd;
     /** @var string */
     public $email;
     /** @var string */
