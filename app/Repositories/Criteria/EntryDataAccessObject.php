@@ -28,6 +28,9 @@ class EntryDataAccessObject extends FluentObject implements Entryable
      */
     public function save(EntryEntity $item)
     {
+		error_log( print_r( __FILE__.'\n', true ), "3", "/tmp/debug.log" );
+		error_log( print_r( __CLASS__.':'.__METHOD__, true ), "3", "/tmp/debug.log" );
+
         if (is_null($item->getId())) {
             return $this->db->connection()
                 ->table($this->table)->insertGetId($this->data($item));

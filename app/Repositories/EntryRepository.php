@@ -24,6 +24,9 @@ class EntryRepository implements EntryRepositoryInterface
      */
     public function save(EntryEntity $item)
     {
+		error_log( print_r( __FILE__.'\n', true ), "3", "/tmp/debug.log" );
+		error_log( print_r( __CLASS__.':'.__METHOD__, true ), "3", "/tmp/debug.log" );
+		
         $this->entryable->save($item);
         return $item;
     }
