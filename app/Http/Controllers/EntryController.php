@@ -42,6 +42,8 @@ class EntryController extends AbstractController
         $this->entry->setEntry([
             'name' => 'tarou',
             'cust_cd' => '22',
+            'email' => 's-hayashi@gmail.com',
+            'password' => 'password',
         ]);
     }
 }
